@@ -1,0 +1,54 @@
+Ext.define('Onlineshopping.onlineshopping.web.shop.view.retail.ItemDetails', {
+     "xtype": "itemDetails",
+     "items": [{
+          "xtype": "displayfield",
+          "fieldLabel": "Product",
+          "margin": 5,
+          "bindable": "product",
+          "name": "product",
+          "itemId": "dhhccgi",
+          "bind": "{product}"
+     }, {
+          "xtype": "displayfield",
+          "fieldLabel": "Brand",
+          "margin": 5,
+          "bindable": "brand",
+          "name": "brand",
+          "itemId": "hmaepai",
+          "bind": "{brand}"
+     }, {
+          "xtype": "displayfield",
+          "fieldLabel": "Category",
+          "margin": 5,
+          "bindable": "category",
+          "name": "category",
+          "itemId": "klmjbmi",
+          "bind": "{category}"
+     }, {
+          "xtype": "displayfield",
+          "fieldLabel": "Item Name",
+          "margin": 5,
+          "bindable": "itemName",
+          "name": "itemName",
+          "itemId": "jgobihi",
+          "bind": "{itemName}"
+     }, {
+          "xtype": "hiddenfield",
+          "fieldLabel": "itemId",
+          "bindable": "itemId",
+          "margin": 5,
+          "name": "itemId",
+          "itemId": "hebilgi",
+          "bind": "{itemId}"
+     }],
+     "border": true,
+     "autoScroll": true,
+     "title": "Form",
+     "margin": 5,
+     "itemId": "adefhfi",
+     "dockedItems": [],
+     "extend": "Ext.form.Panel",
+     "requires": ["Onlineshopping.onlineshopping.web.shop.controller.retail.ItemDetailsController", "Onlineshopping.onlineshopping.shared.shop.viewmodel.retail.ItemDetailsViewModel", "Onlineshopping.onlineshopping.shared.shop.model.retail.ItemDetailsModel"],
+     "viewModel": "ItemDetailsViewModel",
+     "controller": "ItemDetailsController"
+});

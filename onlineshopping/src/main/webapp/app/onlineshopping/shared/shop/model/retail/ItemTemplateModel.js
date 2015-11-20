@@ -1,0 +1,40 @@
+Ext.define('Onlineshopping.onlineshopping.shared.shop.model.retail.ItemTemplateModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "itemId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "productName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "brandName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "categoryName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "itemName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "itemIcon",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "itemPrice",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "cartQty",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "addtocart",
+          "type": "auto",
+          "defaultValue": ""
+     }]
+});

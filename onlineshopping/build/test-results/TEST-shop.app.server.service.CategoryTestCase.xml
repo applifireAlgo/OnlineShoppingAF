@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="shop.app.server.service.CategoryTestCase" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-11-18T11:13:20" hostname="841e5ca0647a" time="0.358">
+  <properties/>
+  <testcase name="test1Save" classname="shop.app.server.service.CategoryTestCase" time="0.125"/>
+  <testcase name="test2Update" classname="shop.app.server.service.CategoryTestCase" time="0.044"/>
+  <testcase name="test3FindById" classname="shop.app.server.service.CategoryTestCase" time="0.007"/>
+  <testcase name="test3findBybrand" classname="shop.app.server.service.CategoryTestCase" time="0.007"/>
+  <testcase name="test3findByproduct" classname="shop.app.server.service.CategoryTestCase" time="0.007"/>
+  <testcase name="test4Delete" classname="shop.app.server.service.CategoryTestCase" time="0.166"/>
+  <system-out><![CDATA[In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:20.738--ClientSession(1299978876)--Connection(725724072)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Product_M (productId, productName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [6E33F81E-25C7-4E74-B167-0C404CF6C6AF, 39Z3WWO7sszU6JAyNXe7CYymoYWdD5002WY0FEhbJck96tXnj4, 1, AAAAA, 2015-11-18 16:43:20.733, null, 2015-11-18 16:43:20.733, 1, null]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:20.78--ClientSession(580555144)--Connection(725724072)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Brand_M (brandId, brandName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [9EC3B4ED-F84D-4EF1-94CF-1AC51BFAD1BB, vKPEXiUKJpZWtqvujftsSP3igsO4FHAn5LtVUrZozgc5JQO6oD, 6E33F81E-25C7-4E74-B167-0C404CF6C6AF, 1, AAAAA, 2015-11-18 16:43:20.733, null, 2015-11-18 16:43:20.733, 1, null]
+Setting logged in user info for ADD
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:20.816--ClientSession(1464302398)--Connection(725724072)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Category_M (categoryId, brand, categoryName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [0F1E3B6A-76E0-4F68-AB81-A2D61D75DEAE, 9EC3B4ED-F84D-4EF1-94CF-1AC51BFAD1BB, FdMUdA0zSzrvI1084hpk6ZpHXfjduJCRuPNgRMaI2qK5rER22B, 6E33F81E-25C7-4E74-B167-0C404CF6C6AF, 1, AAAAA, 2015-11-18 16:43:20.809, null, 2015-11-18 16:43:20.809, 1, null]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:20.849--ClientSession(1138023283)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT categoryId, brand, categoryName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Category_M WHERE ((activeStatus = ?) AND (categoryId = ?))
+	bind => [1, 0F1E3B6A-76E0-4F68-AB81-A2D61D75DEAE]
+Setting logged in user info for UPDATE
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:20.852--ClientSession(519745819)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT categoryId, brand, categoryName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Category_M WHERE (categoryId = ?)
+	bind => [0F1E3B6A-76E0-4F68-AB81-A2D61D75DEAE]
+[EL Fine]: sql: 2015-11-18 11:13:20.854--ClientSession(519745819)--Connection(725724072)--Thread(Thread[Test worker,5,main])--UPDATE ast_Category_M SET categoryName = ?, updatedBy = ?, versionId = ? WHERE ((categoryId = ?) AND (versionId = ?))
+	bind => [rXqxFelwHu6O6hpogbw6bulEz52j3qHWbx5RHiEwsUYiFKQ7xx, AAAAA, 2, 0F1E3B6A-76E0-4F68-AB81-A2D61D75DEAE, 1]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:20.892--ClientSession(641178171)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT categoryId, brand, categoryName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Category_M WHERE ((activeStatus = ?) AND (categoryId = ?))
+	bind => [1, 0F1E3B6A-76E0-4F68-AB81-A2D61D75DEAE]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:20.899--ClientSession(1978339704)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT categoryId, brand, categoryName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Category_M WHERE ((activeStatus = ?) AND (brand = ?))
+	bind => [1, 9EC3B4ED-F84D-4EF1-94CF-1AC51BFAD1BB]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:20.907--ClientSession(1225434555)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT categoryId, brand, categoryName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Category_M WHERE ((activeStatus = ?) AND (product = ?))
+	bind => [1, 6E33F81E-25C7-4E74-B167-0C404CF6C6AF]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:20.914--ClientSession(1888992184)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT categoryId, brand, categoryName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Category_M WHERE (categoryId = ?)
+	bind => [0F1E3B6A-76E0-4F68-AB81-A2D61D75DEAE]
+[EL Fine]: sql: 2015-11-18 11:13:20.916--ClientSession(1888992184)--Connection(725724072)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Category_M WHERE ((categoryId = ?) AND (versionId = ?))
+	bind => [0F1E3B6A-76E0-4F68-AB81-A2D61D75DEAE, 2]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:20.946--ClientSession(2106924707)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT brandId, brandName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Brand_M WHERE (brandId = ?)
+	bind => [9EC3B4ED-F84D-4EF1-94CF-1AC51BFAD1BB]
+[EL Fine]: sql: 2015-11-18 11:13:20.948--ClientSession(2106924707)--Connection(725724072)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Brand_M WHERE ((brandId = ?) AND (versionId = ?))
+	bind => [9EC3B4ED-F84D-4EF1-94CF-1AC51BFAD1BB, 1]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:21.012--ClientSession(826672398)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT productId, productName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Product_M WHERE (productId = ?)
+	bind => [6E33F81E-25C7-4E74-B167-0C404CF6C6AF]
+[EL Fine]: sql: 2015-11-18 11:13:21.014--ClientSession(826672398)--Connection(725724072)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Product_M WHERE ((productId = ?) AND (versionId = ?))
+	bind => [6E33F81E-25C7-4E74-B167-0C404CF6C6AF, 1]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

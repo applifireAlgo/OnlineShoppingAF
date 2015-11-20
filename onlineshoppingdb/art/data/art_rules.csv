@@ -1,0 +1,142 @@
+06ea4992-fa69-4b18-98c1-583494881424#appfire#AddToCartProcessing#appfire#\N#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:18:51#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:18:51#appfire#1#appfire#0#appfire#W2QDPONP4TKPSONCGSNTQ#appfire#1
+1782fc8a-c3ad-470c-8a7f-f1d411afcbe6#appfire#AddToCartRule#appfire#\N#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:16:30#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:16:30#appfire#1#appfire#0#appfire#W2QDPONP4TKPSONCGSNTQ#appfire#1
+3940f250-b5c8-457b-b094-2bbba0187731#appfire#CalOutput#appfire#\N#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:16:19#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:16:19#appfire#1#appfire#0#appfire#W2QDPONP4TKPSONCGSNTQ#appfire#1
+5210d851-645a-42fa-911d-ac9be2646753#appfire#ProcessAddToCart#appfire#<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\
+<package name="retailcontext.retail" xmlns="http://drools.org/drools-5.2">\
+    <import name="shop.app.shared.retail.Cart"/>\
+    <import name="shop.app.shared.retail.Item"/>\
+    <import name="com.athena.framework.server.helper.RuntimeLogInfoHelper"/>\
+    <rule name="CalSubTotal">\
+        <rule-attribute name="no-loop" value="true"/>\
+        <lhs>\
+            <pattern identifier="cart_13" object-type="shop.app.shared.retail.Cart">\
+                <expr>( getCartId() != null )</expr>\
+            </pattern>\
+            <pattern identifier="item_14" object-type="shop.app.shared.retail.Item">\
+                <expr>( getItemId() != null )</expr>\
+            </pattern>\
+            <pattern identifier="runtimeLogInfoHelper" object-type="com.athena.framework.server.helper.RuntimeLogInfoHelper">\
+                <expr>( getRuntimeLogInfo().getUserId() != null )</expr>\
+            </pattern>\
+        </lhs>\
+        <rhs>	\
+	cart_13.setItemPrice(java.lang.Double.valueOf(item_14.getItemPrice()));\
+	cart_13.setSubTotal(java.lang.Double.valueOf(item_14.getItemPrice()*cart_13.getCartQty()));\
+	cart_13.setUserId(java.lang.String.valueOf(runtimeLogInfoHelper.getRuntimeLogInfo().getUserId()));\
+	update(cart_13);\
+</rhs>\
+    </rule>\
+    <query name="retrivecart_13">\
+        <lhs>\
+            <pattern field-name="cart_13" identifier="cart_13" object-type="shop.app.shared.retail.Cart"/>\
+        </lhs>\
+    </query>\
+</package>\
+#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:23:48#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:23:48#appfire#1#appfire#1#appfire#W2QDPONP4TKPSONCGSNTQ#appfire#1
+aee2ab84-7927-4f58-905b-d98131eeea0f#appfire#FetchCartDetails#appfire#<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\
+<package name="retailcontext.retail" xmlns="http://drools.org/drools-5.2"/>\
+#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:53:33#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:53:33#appfire#1#appfire#1#appfire#W2QDPONP4TKPSONCGSNTQ#appfire#1
+b8d477e9-b696-4736-b0f6-2c668284f54a#appfire#OrderProcessing#appfire#<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\
+<package name="retailcontext.retail" xmlns="http://drools.org/drools-5.2">\
+    <import name="shop.app.shared.retail.OrderMain"/>\
+    <import name="shop.app.shared.retail.OrderDetail"/>\
+    <import name="com.athena.framework.server.helper.RuntimeLogInfoHelper"/>\
+    <rule name="ProcessOrderSubRule">\
+        <rule-attribute name="no-loop" value="true"/>\
+        <lhs>\
+            <pattern identifier="ordermain_2" object-type="shop.app.shared.retail.OrderMain">\
+                <expr>( getOrderId() != null )</expr>\
+            </pattern>\
+            <pattern identifier="orderDetail" object-type="shop.app.shared.retail.OrderDetail">\
+                <from>\
+                    <expression>ordermain_2.orderDetail</expression>\
+                </from>\
+            </pattern>\
+            <pattern identifier="runtimeLogInfoHelper" object-type="com.athena.framework.server.helper.RuntimeLogInfoHelper">\
+                <expr>( getRuntimeLogInfo().getUserId() != null )</expr>\
+            </pattern>\
+        </lhs>\
+        <rhs>	\
+	ordermain_2.setOrderDate(new java.sql.Date(java.util.Calendar.getInstance().getTime().getTime()));\
+	ordermain_2.setUserId(java.lang.String.valueOf(runtimeLogInfoHelper.getRuntimeLogInfo().getUserId()));\
+	ordermain_2.setTotal(java.lang.Double.valueOf(ordermain_2.getTotalSubTotal()));\
+	update(ordermain_2);\
+</rhs>\
+    </rule>\
+    <query name="retriveordermain_2">\
+        <lhs>\
+            <pattern field-name="ordermain_2" identifier="ordermain_2" object-type="shop.app.shared.retail.OrderMain"/>\
+        </lhs>\
+    </query>\
+</package>\
+#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:47:35#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:47:35#appfire#1#appfire#1#appfire#W2QDPONP4TKPSONCGSNTQ#appfire#1
+bcda4dd8-b59e-4918-bac9-f1c8926d441d#appfire#CalOutput#appfire#<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\
+<package name="retailcontext.retail" xmlns="http://drools.org/drools-5.2">\
+    <import name="shop.app.shared.retail.Cart"/>\
+    <import name="shop.app.shared.retail.Item"/>\
+    <import name="com.athena.framework.server.helper.RuntimeLogInfoHelper"/>\
+    <rule name="subCalTotal">\
+        <rule-attribute name="no-loop" value="true"/>\
+        <lhs>\
+            <pattern identifier="entity" object-type="shop.app.shared.retail.Cart">\
+                <expr>( getPrice() != null )</expr>\
+            </pattern>\
+            <pattern identifier="item_0" object-type="shop.app.shared.retail.Item">\
+                <expr>( getItemId() != null )</expr>\
+            </pattern>\
+            <pattern identifier="runtimeLogInfoHelper" object-type="com.athena.framework.server.helper.RuntimeLogInfoHelper">\
+                <expr>( getRuntimeLogInfo().getUserId() != null )</expr>\
+            </pattern>\
+        </lhs>\
+        <rhs>	\
+	entity.setPrice(java.lang.Double.valueOf(item_0.getItemPrice()*entity.getCartQty()));\
+	entity.setUserId(java.lang.String.valueOf(runtimeLogInfoHelper.getRuntimeLogInfo().getUserId()));\
+	entity.setCartId(java.lang.String.valueOf(entity.getCartId()));\
+	entity.setItemId(java.lang.String.valueOf(entity.getItemId()));\
+	update(entity);\
+</rhs>\
+    </rule>\
+    <query name="retriveentity">\
+        <lhs>\
+            <pattern field-name="entity" identifier="entity" object-type="shop.app.shared.retail.Cart"/>\
+        </lhs>\
+    </query>\
+</package>\
+#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-17 14:44:59#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-17 14:44:59#appfire#1#appfire#0#appfire#W2QDPONP4TKPSONCGSNTQ#appfire#1
+d4c022af-1765-43a4-a20a-9a9d1e79a882#appfire#UpdateStockRule#appfire#<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\
+<package name="retailcontext.retail" xmlns="http://drools.org/drools-5.2">\
+    <import name="shop.app.shared.retail.Cart"/>\
+    <import name="shop.app.shared.retail.Item"/>\
+    <rule name="UpdateStock">\
+        <rule-attribute name="no-loop" value="true"/>\
+        <lhs>\
+            <pattern identifier="cart_16" object-type="shop.app.shared.retail.Cart">\
+                <expr>( getCartId() != null )</expr>\
+            </pattern>\
+            <pattern identifier="item_17" object-type="shop.app.shared.retail.Item">\
+                <expr>( getItemId() != null )</expr>\
+            </pattern>\
+        </lhs>\
+        <rhs>	\
+	item_17.setItemStock(java.lang.Integer.valueOf(item_17.getItemStock()-cart_16.getCartQty()));\
+	update(item_17);\
+	\
+	cart_16.getSystemInfo().setActiveStatus(java.lang.Integer.valueOf(0));\
+	update(cart_16);\
+</rhs>\
+    </rule>\
+    <query name="retriveitem_17">\
+        <lhs>\
+            <pattern field-name="item_17" identifier="item_17" object-type="shop.app.shared.retail.Item"/>\
+        </lhs>\
+    </query>\
+    <query name="retrivecart_16">\
+        <lhs>\
+            <pattern field-name="cart_16" identifier="cart_16" object-type="shop.app.shared.retail.Cart"/>\
+        </lhs>\
+    </query>\
+</package>\
+#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:31:52#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-18 14:31:52#appfire#1#appfire#1#appfire#W2QDPONP4TKPSONCGSNTQ#appfire#1
+e4a28066-4232-4b86-a000-3fb39391b6dc#appfire#fechItems#appfire#<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\
+<package name="retailcontext.retail" xmlns="http://drools.org/drools-5.2"/>\
+#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-17 19:52:31#appfire#790A3350-782F-438F-84E3-50864BD7E565#appfire#2015-11-17 19:52:31#appfire#1#appfire#1#appfire#W2QDPONP4TKPSONCGSNTQ#appfire#1

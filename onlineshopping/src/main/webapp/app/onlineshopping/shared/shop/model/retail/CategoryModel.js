@@ -1,0 +1,35 @@
+Ext.define('Onlineshopping.onlineshopping.shared.shop.model.retail.CategoryModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "categoryId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "categoryName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "product",
+          "reference": "Product",
+          "defaultValue": ""
+     }, {
+          "name": "brand",
+          "reference": "Brand",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

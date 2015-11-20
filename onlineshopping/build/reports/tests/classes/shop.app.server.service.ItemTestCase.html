@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class shop.app.server.service.ItemTestCase</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class shop.app.server.service.ItemTestCase</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/shop.app.server.service.html">shop.app.server.service</a> &gt; ItemTestCase</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">8</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.940s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">test1Save</td>
+<td>0.308s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test2Update</td>
+<td>0.213s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test3FindById</td>
+<td>0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test3findBybrand</td>
+<td>0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test3findBycategory</td>
+<td>0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test3findByproduct</td>
+<td>0.013s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test4Delete</td>
+<td>0.363s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testNQFetchItemDetails</td>
+<td>0.011s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.131--ClientSession(2007621797)--Connection(725724072)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Product_M (productId, productName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind =&gt; [939FF432-241D-4A3C-8CB3-E0DFA5270BA5, nUaDzB2szUWrrpf4YUEzDxwjnN2fDaIcOe3xgyduZUAdva3DYN, 1, AAAAA, 2015-11-18 16:43:05.074, null, 2015-11-18 16:43:05.074, 1, null]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.197--ClientSession(1190092482)--Connection(725724072)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Brand_M (brandId, brandName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind =&gt; [C3DAEC21-30C9-4071-9AEC-E6F37B0D5D27, KuQf5aS2IL0zj8LN1agou9sIbywQJu2yHw6l3uh0XP76gNY543, 939FF432-241D-4A3C-8CB3-E0DFA5270BA5, 1, AAAAA, 2015-11-18 16:43:05.074, null, 2015-11-18 16:43:05.074, 1, null]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.261--ClientSession(1927659332)--Connection(725724072)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Category_M (categoryId, brand, categoryName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind =&gt; [FF5BA895-5DED-4552-BE20-8AD5288506EC, C3DAEC21-30C9-4071-9AEC-E6F37B0D5D27, lAqxGIw6TQt0Y7GIctneulM3EfNCKBiW7nxS1Awh0p3iCWan1q, 939FF432-241D-4A3C-8CB3-E0DFA5270BA5, 1, AAAAA, 2015-11-18 16:43:05.215, null, 2015-11-18 16:43:05.215, 1, null]
+Setting logged in user info for ADD
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.339--ClientSession(303847216)--Connection(725724072)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Item_M (itemId, brand, category, itemIcon, itemName, itemPrice, itemStock, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind =&gt; [93E4E9E3-99FC-4C75-9B7B-83C27D8AF510, C3DAEC21-30C9-4071-9AEC-E6F37B0D5D27, FF5BA895-5DED-4552-BE20-8AD5288506EC, p2A, B5H1qAikihYRGrnoNiQZHZ8iICxhbOxXfa84GagLDXjWws1Rum, 12.34, 2147483647, 939FF432-241D-4A3C-8CB3-E0DFA5270BA5, 1, AAAAA, 2015-11-18 16:43:05.281, null, 2015-11-18 16:43:05.281, 1, null]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.368--ClientSession(113179074)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT itemId, brand, category, itemIcon, itemName, itemPrice, itemStock, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Item_M WHERE ((activeStatus = ?) AND (itemId = ?))
+	bind =&gt; [1, 93E4E9E3-99FC-4C75-9B7B-83C27D8AF510]
+Setting logged in user info for UPDATE
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.375--ClientSession(2141303697)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT itemId, brand, category, itemIcon, itemName, itemPrice, itemStock, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Item_M WHERE (itemId = ?)
+	bind =&gt; [93E4E9E3-99FC-4C75-9B7B-83C27D8AF510]
+[EL Fine]: sql: 2015-11-18 11:13:05.377--ClientSession(2141303697)--Connection(725724072)--Thread(Thread[Test worker,5,main])--UPDATE ast_Item_M SET itemIcon = ?, itemName = ?, updatedBy = ?, versionId = ? WHERE ((itemId = ?) AND (versionId = ?))
+	bind =&gt; [kYo, UQcAsbiIcy3CBowTmyZh0EFITnwkYdkrQr4u0BaKaYoet8rsj5, AAAAA, 2, 93E4E9E3-99FC-4C75-9B7B-83C27D8AF510, 1]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.579--ClientSession(674840654)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT itemId, brand, category, itemIcon, itemName, itemPrice, itemStock, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Item_M WHERE ((activeStatus = ?) AND (itemId = ?))
+	bind =&gt; [1, 93E4E9E3-99FC-4C75-9B7B-83C27D8AF510]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.593--ClientSession(1304791994)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT itemId, brand, category, itemIcon, itemName, itemPrice, itemStock, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Item_M WHERE ((activeStatus = ?) AND (brand = ?))
+	bind =&gt; [1, C3DAEC21-30C9-4071-9AEC-E6F37B0D5D27]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.603--ClientSession(528894475)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT itemId, brand, category, itemIcon, itemName, itemPrice, itemStock, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Item_M WHERE ((activeStatus = ?) AND (category = ?))
+	bind =&gt; [1, FF5BA895-5DED-4552-BE20-8AD5288506EC]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.615--ClientSession(97656546)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT itemId, brand, category, itemIcon, itemName, itemPrice, itemStock, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Item_M WHERE ((activeStatus = ?) AND (product = ?))
+	bind =&gt; [1, 939FF432-241D-4A3C-8CB3-E0DFA5270BA5]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.626--ClientSession(592373668)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT itemId, brand, category, itemIcon, itemName, itemPrice, itemStock, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Item_M WHERE (itemId = ?)
+	bind =&gt; [93E4E9E3-99FC-4C75-9B7B-83C27D8AF510]
+[EL Fine]: sql: 2015-11-18 11:13:05.629--ClientSession(592373668)--Connection(725724072)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Item_M WHERE ((itemId = ?) AND (versionId = ?))
+	bind =&gt; [93E4E9E3-99FC-4C75-9B7B-83C27D8AF510, 2]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.709--ClientSession(872488375)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT categoryId, brand, categoryName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Category_M WHERE (categoryId = ?)
+	bind =&gt; [FF5BA895-5DED-4552-BE20-8AD5288506EC]
+[EL Fine]: sql: 2015-11-18 11:13:05.712--ClientSession(872488375)--Connection(725724072)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Category_M WHERE ((categoryId = ?) AND (versionId = ?))
+	bind =&gt; [FF5BA895-5DED-4552-BE20-8AD5288506EC, 1]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.81--ClientSession(1721748446)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT brandId, brandName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Brand_M WHERE (brandId = ?)
+	bind =&gt; [C3DAEC21-30C9-4071-9AEC-E6F37B0D5D27]
+[EL Fine]: sql: 2015-11-18 11:13:05.812--ClientSession(1721748446)--Connection(725724072)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Brand_M WHERE ((brandId = ?) AND (versionId = ?))
+	bind =&gt; [C3DAEC21-30C9-4071-9AEC-E6F37B0D5D27, 1]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.887--ClientSession(562402424)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT productId, productName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Product_M WHERE (productId = ?)
+	bind =&gt; [939FF432-241D-4A3C-8CB3-E0DFA5270BA5]
+[EL Fine]: sql: 2015-11-18 11:13:05.889--ClientSession(562402424)--Connection(725724072)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Product_M WHERE ((productId = ?) AND (versionId = ?))
+	bind =&gt; [939FF432-241D-4A3C-8CB3-E0DFA5270BA5, 1]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:05.991--ClientSession(2077827378)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT t0.itemId, t0.brand, t0.category, t0.itemIcon, t0.itemName, t0.itemPrice, t0.itemStock, t0.product, t0.versionId, t0.createdBy, t0.createdDate, t0.updatedBy, t0.updatedDate, t0.activeStatus, t0.txnAccessCode, t1.categoryId, t1.brand, t1.categoryName, t1.product, t1.versionId, t1.createdBy, t1.createdDate, t1.updatedBy, t1.updatedDate, t1.activeStatus, t1.txnAccessCode, t2.productId, t2.productName, t2.versionId, t2.createdBy, t2.createdDate, t2.updatedBy, t2.updatedDate, t2.activeStatus, t2.txnAccessCode, t3.brandId, t3.brandName, t3.product, t3.versionId, t3.createdBy, t3.createdDate, t3.updatedBy, t3.updatedDate, t3.activeStatus, t3.txnAccessCode FROM ast_Brand_M t3, ast_Product_M t2, ast_Category_M t1, ast_Item_M t0 WHERE (((((((t0.product = t2.productId) AND (t0.brand = t3.brandId)) AND (t0.product = t3.product)) AND (t0.product = t1.product)) AND (t0.brand = t1.brand)) AND (t0.category = t1.categoryId)) AND (t0.itemId = ?))
+	bind =&gt; [ab]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.3</a> at Nov 18, 2015 11:13:23 AM</p>
+</div>
+</div>
+</body>
+</html>

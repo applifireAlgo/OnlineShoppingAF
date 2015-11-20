@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class shop.app.server.service.BrandTestCase</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class shop.app.server.service.BrandTestCase</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/shop.app.server.service.html">shop.app.server.service</a> &gt; BrandTestCase</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.252s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">test1Save</td>
+<td>0.086s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test2Update</td>
+<td>0.044s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test3FindById</td>
+<td>0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test3findByproduct</td>
+<td>0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test4Delete</td>
+<td>0.106s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:16.893--ClientSession(669571267)--Connection(725724072)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Product_M (productId, productName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind =&gt; [8B8847BF-96AD-488B-83D6-5444270FBCC6, NC9H6layw3nnon5ryshN43mj0io42v9ao17ouoI0m356slJwYq, 1, AAAAA, 2015-11-18 16:43:16.888, null, 2015-11-18 16:43:16.888, 1, null]
+Setting logged in user info for ADD
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:16.931--ClientSession(743209189)--Connection(725724072)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Brand_M (brandId, brandName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind =&gt; [41E293EF-88A8-4AAF-AAD6-99A33C4AD73B, 4rWMDAfw1Du2PZhGm8vIh9U2c7aW5vs0mG0K0m37lRxXpG4GZg, 8B8847BF-96AD-488B-83D6-5444270FBCC6, 1, AAAAA, 2015-11-18 16:43:16.924, null, 2015-11-18 16:43:16.924, 1, null]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:16.966--ClientSession(1064424703)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT brandId, brandName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Brand_M WHERE ((activeStatus = ?) AND (brandId = ?))
+	bind =&gt; [1, 41E293EF-88A8-4AAF-AAD6-99A33C4AD73B]
+Setting logged in user info for UPDATE
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:16.971--ClientSession(1586876349)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT brandId, brandName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Brand_M WHERE (brandId = ?)
+	bind =&gt; [41E293EF-88A8-4AAF-AAD6-99A33C4AD73B]
+[EL Fine]: sql: 2015-11-18 11:13:16.973--ClientSession(1586876349)--Connection(725724072)--Thread(Thread[Test worker,5,main])--UPDATE ast_Brand_M SET brandName = ?, updatedBy = ?, versionId = ? WHERE ((brandId = ?) AND (versionId = ?))
+	bind =&gt; [MMB5mQiBLIQzsYEcfy1yna4m0Pbg0dOd9hCR6iKPs0LY1SQwhz, AAAAA, 2, 41E293EF-88A8-4AAF-AAD6-99A33C4AD73B, 1]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:17.008--ClientSession(511300775)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT brandId, brandName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Brand_M WHERE ((activeStatus = ?) AND (brandId = ?))
+	bind =&gt; [1, 41E293EF-88A8-4AAF-AAD6-99A33C4AD73B]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:17.017--ClientSession(1809510375)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT brandId, brandName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Brand_M WHERE ((activeStatus = ?) AND (product = ?))
+	bind =&gt; [1, 8B8847BF-96AD-488B-83D6-5444270FBCC6]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:17.024--ClientSession(1471215726)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT brandId, brandName, product, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Brand_M WHERE (brandId = ?)
+	bind =&gt; [41E293EF-88A8-4AAF-AAD6-99A33C4AD73B]
+[EL Fine]: sql: 2015-11-18 11:13:17.026--ClientSession(1471215726)--Connection(725724072)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Brand_M WHERE ((brandId = ?) AND (versionId = ?))
+	bind =&gt; [41E293EF-88A8-4AAF-AAD6-99A33C4AD73B, 2]
+In around repository aspect
+[EL Fine]: sql: 2015-11-18 11:13:17.063--ClientSession(2064902444)--Connection(725724072)--Thread(Thread[Test worker,5,main])--SELECT productId, productName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Product_M WHERE (productId = ?)
+	bind =&gt; [8B8847BF-96AD-488B-83D6-5444270FBCC6]
+[EL Fine]: sql: 2015-11-18 11:13:17.065--ClientSession(2064902444)--Connection(725724072)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Product_M WHERE ((productId = ?) AND (versionId = ?))
+	bind =&gt; [8B8847BF-96AD-488B-83D6-5444270FBCC6, 1]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.3</a> at Nov 18, 2015 11:13:23 AM</p>
+</div>
+</div>
+</body>
+</html>

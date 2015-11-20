@@ -1,0 +1,44 @@
+Ext.define('Onlineshopping.onlineshopping.shared.shop.model.retailcontext.FetchAllItemsModel.FetchAllItemsModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "brandName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "productName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "categoryName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "itemId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "itemName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "itemPrice",
+          "type": "auto",
+          "defaultValue": ""
+     }, {
+          "name": "itemStock",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "itemIcon",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "activeStatus",
+          "type": "int",
+          "defaultValue": ""
+     }]
+});
